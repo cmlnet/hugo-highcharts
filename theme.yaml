@@ -1,0 +1,18 @@
+# theme.yaml configuration file
+
+name: Hugo Highcharts
+license: MIT
+licenselink:
+description: Hugo theme component to display charts with Highcharts
+homepage:
+tags:
+  - component
+  - charts
+  - Highcharts
+features:
+  - display charts
+min_version: 0.72.0
+
+author:
+  name: Christian Humm
+  homepage: https://www.c-m-l.net
