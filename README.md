@@ -1,2 +1,50 @@
 # hugo-highcharts
- A theme compoment for Hugo to display charts with highcharts.js.
+
+A (very simple) theme compoment for Hugo to display charts with the help of the [Highcharts](https://www.highcharts.com/) js library.
+
+## Installation
+
+### As a module (recommended)
+
+Add the following line to your config:
+
+```
+
+```
+
+Then run `hugo mod get -u`.
+
+## Usage
+
+Please be aware that *hugo-highcharts* loads the required (minified) scripts and CSS files from the Highcharts servers by default.
+If you want to host these files loacally – because of data privacy concerns for example – then place [highcharts.js](https://code.highcharts.com/highcharts.js) and [highcharts.css](https://code.highcharts.com/css/highcharts.css) in `assets/js/` and `assets/css/`.
+
+### Using the shortcode
+
+To embed a chart in your markdown files you have to use the following shortcode:
+
+```
+{{< highcharts-custom chart="UNIQUE_NAME" >}}
+    chart code
+{{< /highcharts-custom >}}
+```
+
+You have to omit the `Highcharts.chart('container', {` part as well as the last `});`.
+
+## Demo
+
+You can see examples of the different chart types [on the official Highcharts site](https://www.highcharts.com/demo). To see hugo-highcharts in action on my private blog in two posts (both in German):
+
+- ["Frauenanteil in deutschen politischen Talkshows"](https://www.c-m-l.net/2013/02/05/frauenanteil-in-deutschen-politischen-talkshows/) ([Source on GitHub](https://github.com/cmlnet/c-m-l.net/blob/master/content/posts/2013-02-05-frauenanteil-in-deutschen-politischen-talkshows/index.de.md))
+- ["StuPa Wahlbeteiligung 2005 bis 2014"](https://www.c-m-l.net/2014/12/18/stupa-wahlbeteiligung-2005-bis-2014/) ([Source on GitHub](https://github.com/cmlnet/c-m-l.net/tree/master/content/posts/2014-12-18-stupa-wahlbeteiligung-2005-bis-2014))
+
+## ToDo
+
+- [] Ensure js and css is loaded only once in a page
+- [] Enable loading of highcharts modules via parameter
+- [] Add shortcodes for generating ready made graphs
+- [] Fallback image (set via param)
+
+## Credits
+
+- Inspiration from the [Dusky Neon Potato](https://github.com/VVelox/hugo-dusky-neon-potato) theme for Hugo by [VVelox](https://vvelox.net/) -->

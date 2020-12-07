@@ -1,11 +1,3 @@
-<!-- based on: https://github.com/VVelox/hugo-dusky-neon-potato -->
-<!-- ToDo:
-- Ensure js and css is loaded only once in a page
-- Enable loading of modules via parameter
-- Param to swtich between cdn and local hosting
-- Param for fallback image
---->
-
 <!-- Load and optimize highcharts.css -->
 {{ if eq $.Site.Params.HighchartsLocal true }}
   {{ $styles := resources.Get "css/highcharts.css" }}
