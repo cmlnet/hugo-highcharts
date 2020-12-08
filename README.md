@@ -78,4 +78,4 @@ You can see examples of the different chart types [on the official Highcharts si
 
 ## Credits
 
-- Inspiration from the [Dusky Neon Potato](https://github.com/VVelox/hugo-dusky-neon-potato) theme for Hugo by [VVelox](https://vvelox.net/) -->
+- Inspiration from the [Dusky Neon Potato](https://github.com/VVelox/hugo-dusky-neon-potato) theme for Hugo by [VVelox](https://vvelox.net/)
