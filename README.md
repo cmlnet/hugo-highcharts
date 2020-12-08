@@ -21,13 +21,13 @@ Then run `hugo mod get -u`.
 ## Usage
 
 Please be aware that *hugo-highcharts* loads the required (minified) scripts and CSS files from the Highcharts servers by default.
-If you want to host these files loacally – because of data privacy concerns for example – then place [highcharts.js](https://code.highcharts.com/highcharts.js) and [highcharts.css](https://code.highcharts.com/css/highcharts.css) in `assets/js/` and `assets/css/`.
+If you want to host these files loacally – because of data privacy concerns for example – then place [highcharts.js](https://code.highcharts.com/highcharts.js) and [highcharts.css](https://code.highcharts.com/css/highcharts.css) in `assets/js/` and `assets/css/`. This will disable external loading of the files automatically.
 
 ### Using the shortcode
 
 To embed a chart in your markdown files you have to use the following shortcode:
 
-```
+```go
 {{< highcharts-custom chart="UNIQUE_NAME" height="123" width="123" >}}
     chart code
 {{< /highcharts-custom >}}
