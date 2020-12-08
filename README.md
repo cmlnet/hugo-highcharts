@@ -1,6 +1,6 @@
 # hugo-highcharts
 
-A (very simple) theme compoment for Hugo to display charts with the help of the [Highcharts](https://www.highcharts.com/) js library.
+A (very simple) theme compoment (shortcode) for Hugo to display charts with the help of the [Highcharts](https://www.highcharts.com/) js library.
 
 * [Installation](#installation)
   + [As a module](#as-a-module)
@@ -64,17 +64,17 @@ You have to omit the `Highcharts.chart('container', {` part at the beginning as 
 
 ## Demo
 
-You can see examples of the different chart types [on the official Highcharts site](https://www.highcharts.com/demo). To see hugo-highcharts in action on my private blog in two posts (both in German):
+You can see examples of the different chart types [on the official Highcharts site](https://www.highcharts.com/demo). To see *hugo-highcharts* in action on my private blog in two posts (both in German):
 
 - ["Frauenanteil in deutschen politischen Talkshows"](https://www.c-m-l.net/2013/02/05/frauenanteil-in-deutschen-politischen-talkshows/) ([Source on GitHub](https://github.com/cmlnet/c-m-l.net/blob/master/content/posts/2013-02-05-frauenanteil-in-deutschen-politischen-talkshows/index.de.md))
 - ["StuPa Wahlbeteiligung 2005 bis 2014"](https://www.c-m-l.net/2014/12/18/stupa-wahlbeteiligung-2005-bis-2014/) ([Source on GitHub](https://github.com/cmlnet/c-m-l.net/tree/master/content/posts/2014-12-18-stupa-wahlbeteiligung-2005-bis-2014))
 
 ## ToDo
 
-- [] Ensure js and css is loaded only once in a page
-- [] Enable loading of highcharts modules via parameter
-- [] Add shortcodes for generating ready made graphs
-- [] Fallback image (set via param)
+- [ ] Ensure js and css is loaded only once in a page
+- [ ] Enable loading of highcharts modules via parameter
+- [ ] Add shortcodes for generating ready made graphs
+- [ ] Fallback image (set via param)
 
 ## Credits
 
