@@ -2,9 +2,18 @@
 
 A (very simple) theme compoment for Hugo to display charts with the help of the [Highcharts](https://www.highcharts.com/) js library.
 
+* [Installation](#installation)
+  + [As a module](#as-a-module)
+  + [As a git submodule](#as-a-git-submodule)
+* [Usage](#usage)
+  + [Using the shortcode](#using-the-shortcode)
+* [Demo](#demo)
+* [ToDo](#todo)
+* [Credits](#credits)
+
 ## Installation
 
-### As a module (recommended)
+### As a module
 
 Add the following line to your config:
 
@@ -16,7 +25,23 @@ Add the following line to your config:
     path = "github.com/cmlnet/hugo-highcharts"
 ```
 
-Then run `hugo mod get -u`.
+Then run `hugo mod get -u`.  This way you can also update the theme.
+
+### As a git submodule
+
+Add *hugo-highcharts* as a git submodule in your project:
+
+```bash
+git submodule add https://github.com/cmlnet/hugo-highcharts.git themes/hugo-highcharts
+```
+
+Then add in your config `theme = "hugo-highcharts"`.
+
+In order to update the theme use the following command: 
+
+```bash
+git submodule update --remote --merge
+```
 
 ## Usage
 
