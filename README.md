@@ -8,8 +8,12 @@ A (very simple) theme compoment for Hugo to display charts with the help of the 
 
 Add the following line to your config:
 
-```
-
+```toml
+[module]
+  [[module.imports]]
+    disable = false
+    ignoreConfig = false
+    path = "github.com/cmlnet/hugo-highcharts"
 ```
 
 Then run `hugo mod get -u`.
@@ -24,12 +28,14 @@ If you want to host these files loacally – because of data privacy concerns fo
 To embed a chart in your markdown files you have to use the following shortcode:
 
 ```
-{{< highcharts-custom chart="UNIQUE_NAME" >}}
+{{< highcharts-custom chart="UNIQUE_NAME" height="123" width="123" >}}
     chart code
 {{< /highcharts-custom >}}
 ```
 
-You have to omit the `Highcharts.chart('container', {` part as well as the last `});`.
+You have to omit the `Highcharts.chart('container', {` part at the beginning as well as the last `});`.
+
+`height` and `width` are optinal parameters. If not set they will default to `height="30rem"` and `width="100%"`.
 
 ## Demo
 
