@@ -1,32 +1,20 @@
-{{ $highcharts_css := .Scratch.Get "highcharts_css" }}
-{{ with $highcharts_css }}
-{{ else }}
-  {{ .Scratch.Set "highcharts_css" "0" }}
-{{ end }}
-
-{{ $highcharts_js := .Scratch.Get "highcharts_js" }}
-{{ with $highcharts_js }}
-{{ else }}
-{{ .Scratch.Set "highcharts_js" "0" }}
-{{ end }}
-
 <!-- Load and optimize highcharts.css -->
-{{ if  ne (.Scratch.Get "highcharts_css") }}
+{{ if not (.Page.Scratch.Get "highcharts_css") }}
   {{ if (fileExists "assets/css/highcharts.css") }}
-    {{ $styles := resources.Get "css/highcharts.css" }}
-    {{ $styles = $styles | resources.PostCSS }}
-    {{ if  hugo.IsProduction  }}
-      {{ $styles = $styles | minify | fingerprint }}
-    {{ end }}
-    <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
-  {{ else }}
-    <link href="https://code.highcharts.com/css/highcharts.css" rel="stylesheet" />
+  {{ $styles := resources.Get "css/highcharts.css" }}
+  {{ $styles = $styles | resources.PostCSS }}
+  {{ if  hugo.IsProduction  }}
+    {{ $styles = $styles | minify | fingerprint }}
   {{ end }}
-  {{ .Scratch.Set "highcharts_css" "1" }}
+  <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+  {{ else }}
+  <link href="https://code.highcharts.com/css/highcharts.css" rel="stylesheet" />
+  {{ end }}
+  {{ .Page.Scratch.Set "highcharts_css" 1 }}
 {{ end }}
 
 <!-- Load highcharts.js -->
-{{ if  ne (.Scratch.Get "highcharts_js") "1" }}
+{{ if not (.Page.Scratch.Get "highcharts_js") }}
   {{ if (fileExists "assets/js/highcharts.js") }}
     {{ $script := resources.Get "js/highcharts.js" }}
     {{ if hugo.IsProduction }}
@@ -38,7 +26,7 @@
   {{ else }}
     <script src="https://code.highcharts.com/highcharts.js"></script>
   {{ end }}
-  {{ .Scratch.Set "highcharts_js" "1" }}
+  {{ .Page.Scratch.Set "highcharts_js" 1 }}
 {{ end }}
 
 <!-- Place the chart -->
