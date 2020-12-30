@@ -71,7 +71,7 @@ You can see examples of the different chart types [on the official Highcharts si
 
 ## ToDo
 
-- [ ] Ensure js and css is loaded only once in a page
+- [X] Ensure js and css is loaded only once in a page (v0.0.2)
 - [ ] Enable loading of highcharts modules via parameter
 - [ ] Add shortcodes for generating ready made graphs
 - [ ] Fallback image (set via param)
