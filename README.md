@@ -1,6 +1,6 @@
 # hugo-highcharts
 
-A (very simple) theme compoment (shortcode) for Hugo to display charts with the help of the [Highcharts](https://www.highcharts.com/) js library.
+A (very simple) theme component (shortcode) for the Static Site Generator [Hugo](https://gohugo.io/) to display charts with the help of the [Highcharts](https://www.highcharts.com/) js library.
 
 * [Installation](#installation)
   * [As a module](#as-a-module)
