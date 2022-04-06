@@ -1,14 +1,14 @@
 <!-- Load and optimize highcharts.css -->
 {{ if not (.Page.Scratch.Get "highcharts_css") }}
   {{ if (fileExists "assets/css/highcharts.css") }}
-  {{ $styles := resources.Get "css/highcharts.css" }}
-  {{ $styles = $styles | resources.PostCSS }}
-  {{ if  hugo.IsProduction  }}
-    {{ $styles = $styles | minify | fingerprint }}
-  {{ end }}
-  <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
-  {{ else }}
-  <link href="https://code.highcharts.com/css/highcharts.css" rel="stylesheet" />
+    {{ $styles := resources.Get "css/highcharts.css" }}
+    {{ $styles = $styles | resources.PostCSS }}
+    {{ if  hugo.IsProduction  }}
+      {{ $styles = $styles | minify | fingerprint }}
+    {{ end }}
+      <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+    {{ else }}
+      <link href="https://code.highcharts.com/css/highcharts.css" rel="stylesheet" />
   {{ end }}
   {{ .Page.Scratch.Set "highcharts_css" 1 }}
 {{ end }}
@@ -18,7 +18,7 @@
   {{ if (fileExists "assets/js/highcharts.js") }}
     {{ $script := resources.Get "js/highcharts.js" }}
     {{ if hugo.IsProduction }}
-      {{ $script = $script | minify | fingerprint }}
+      {{ $script = $script | resources.Fingerprint "sha512" }}
       <script type="text/javascript" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
     {{ else }}
       <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
